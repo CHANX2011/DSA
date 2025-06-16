@@ -106,10 +106,11 @@ public class task3 {
 			ch.add(30);
 			ch.add(40);
 			ch.add(50);
-			System.out.print("the added numbers are:");
+			System.out.print("the number before delete:");
 			ch.Display();
-			System.out.print("the added numbers in reverse:");
-			ch.Displayprev();
+			ch.deleteAtPosition(3);
+			System.out.print("the number after delete:");
+			ch.Display();
 		
 
 	
