@@ -1,0 +1,42 @@
+create database demo;
+use demo;
+CREATE TABLE Stud(
+    NAME VARCHAR(50),
+    mark int,
+    department VARCHAR(15),
+    section char
+);
+
+INSERT INTO Student (NAME, mark, department, section) VALUES
+("Gowdham",100,"Bsc CT","B"),
+("gowthaman",70,"Bsc ECS","A"),
+("Nandagopal",60,"BCA CS","A"),
+("selva kumar",50,"BCA","C"),
+("Preveen kumar",40,"BCA","A");
+
+select * from stud;
+
+set sql_safe_updates=0;
+UPDATE stud 
+SET NAME = 'Nanda gopal'
+WHERE mark = 60;
+
+select * from stud where mark < 60;
+
+select NAME,department,section from stud;
+
+
+output:
+NAME            Mark    department   Section
+selva kumar	50	BCA		C
+Preveen kumar	40	BCA	        A
+
+
+
+
+NAME            department   Section
+Gowdham		BCA	     B
+gowthaman	BCA	     A
+Nandagopal	BCA          A
+selva kumar	BCA          C
+Preveen kumar	BCA	     A
